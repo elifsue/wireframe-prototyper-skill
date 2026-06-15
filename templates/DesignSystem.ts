@@ -3,6 +3,7 @@ import {
   DSColors,
   DS_TOKEN_KEYS,
 } from "./DesignSystemContext";
+import { DEFAULT_DS_COLORS } from "./dsPresets";
 
 /* ─── Design System Colors (Hi-Fi) ─── */
 /* DS is a live mutable object synced by DesignSystemContext.
@@ -15,41 +16,7 @@ const DS: DSColors & {
   shadow: string;
   shadowMd: string;
 } = {
-  primary: "#6750A4",
-  onPrimary: "#FFFFFF",
-  primaryContainer: "#EADDFF",
-  onPrimaryContainer: "#4F378B",
-  secondary: "#625B71",
-  onSecondary: "#FFFFFF",
-  secondaryContainer: "#E8DEF8",
-  onSecondaryContainer: "#4A4458",
-  tertiary: "#7D5260",
-  onTertiary: "#FFFFFF",
-  tertiaryContainer: "#FFD8E4",
-  onTertiaryContainer: "#633B48",
-  success: "#1B873B",
-  onSuccess: "#FFFFFF",
-  successContainer: "#D4F5DC",
-  onSuccessContainer: "#0D5E26",
-  error: "#B3261E",
-  onError: "#FFFFFF",
-  errorContainer: "#F9DEDC",
-  onErrorContainer: "#8C1D18",
-  surface: "#FEF7FF",
-  onSurface: "#1D1B20",
-  surfaceVariant: "#E7E0EC",
-  onSurfaceVariant: "#49454F",
-  surfaceContainerHighest: "#E6E0E9",
-  surfaceContainerHigh: "#ECE6F0",
-  surfaceContainer: "#F3EDF7",
-  surfaceContainerLow: "#F7F2FA",
-  surfaceContainerLowest: "#FFFFFF",
-  inverseSurface: "#322F35",
-  inverseOnSurface: "#F5EFF7",
-  surfaceTint: "#6750A4",
-  surfaceTintColor: "#6750A4",
-  outline: "#79747E",
-  outlineVariant: "#CAC4D0",
+  ...DEFAULT_DS_COLORS,
   // Non-color tokens (not editable via color picker)
   radius: "12px",
   radiusSm: "8px",

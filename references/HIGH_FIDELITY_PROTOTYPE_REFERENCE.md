@@ -27,13 +27,12 @@
 - Generate contextually relevant images (e.g., product photos, avatars, hero banners, category images) and upload them to CDN to get hosted URLs.
 - Every image visible in the prototype must be a real generated image that represents the actual content it would show in a production website.
 - When building screens that display repeated items (e.g., product grids, user avatars, gallery thumbnails), generate a unique image for **each** item — do not reuse the same image across all items unless they logically represent the same thing.
-- After completing all screens, do a final pass to verify no image placeholder was missed across the entire project.
 
 ## Typography
 
 - Use the project's chosen font family loaded via Google Fonts CDN.
 - Apply proper typographic hierarchy (headings, subheadings, body, captions) using consistent sizing.
-- **AppShell is excluded.** The AppShell (sidebar, toolbar) keeps its own fixed font styling. The chosen project font applies only to screens, dialogs, and components — never to the AppShell.
+- **Tools folder is excluded.** The AppShell, ScreensSidebar, Toolbar, and ColorPaletteTool keep their own fixed font styling. The chosen project font applies only to screens, dialogs, and components — never to files in the tools folder.
 
 ## Component Styling
 

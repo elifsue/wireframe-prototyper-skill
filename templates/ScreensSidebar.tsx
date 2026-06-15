@@ -3,6 +3,7 @@ import { Layout, ChevronRight } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
 import { screens } from "./screens";
+import { PROJECT_NAME, PROJECT_INITIALS } from "./projectConfig";
 
 interface ScreensSidebarProps {
   isOpen: boolean;
@@ -44,11 +45,11 @@ export default function ScreensSidebar({ isOpen }: ScreensSidebarProps) {
                 background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
               }}
             >
-              <span className="text-white text-sm font-bold">KW</span>
+              <span className="text-white text-sm font-bold">{PROJECT_INITIALS}</span>
             </div>
             <div>
               <h2 className="text-sm font-semibold text-white tracking-wide">
-                Kiddiwear
+                {PROJECT_NAME}
               </h2>
               <p
                 className="text-[10px] uppercase tracking-widest"

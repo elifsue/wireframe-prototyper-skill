@@ -1,4 +1,4 @@
-# Wireframe Prototyper
+# Wireframe Prototyper Skill
 
 A Claude skill that builds interactive website wireframes and high-fidelity prototypes as deployed web applications. Instead of static mockups, you get a fully navigable prototype with switchable fidelity modes, a live colour system, and tools for presenting and exporting your work.
 
@@ -101,9 +101,9 @@ Your custom palette is always added as the first preset and becomes the default.
 ## File Structure
 
 ```
-wireframe-prototyper/
-├── SKILL.md                          ← Main skill instructions
+wireframe-prototyper-skill/
 ├── README.md                         ← This file
+├── SKILL.md                          ← Main skill instructions
 ├── references/
 │   ├── DESIGN_RULES_REFERENCE.md     ← Common rules for both fidelity modes
 │   ├── HIGH_FIDELITY_PROTOTYPE_REFERENCE.md  ← Hi-Fi specific rules
@@ -111,15 +111,18 @@ wireframe-prototyper/
 │   └── M3_COLOR_ROLES_REFERENCE.md   ← Material Design 3 colour system guide
 └── templates/
     ├── AppShell.tsx                   ← Shell wrapper (sidebar + toolbar + canvas)
-    ├── ScreensSidebar.tsx             ← Left sidebar with screen navigation
-    ├── Toolbar.tsx                    ← Top toolbar with fidelity toggle and tools
     ├── ColorPaletteTool.tsx           ← Colour system editor with WCAG checker
-    ├── screens.ts                    ← Screen definitions (update with your screens)
     ├── DesignSystem.ts               ← DS token object with live sync
     ├── DesignSystemContext.tsx        ← Colour state and preset management
     ├── dsPresets.ts                  ← Built-in palettes (add yours as first entry)
     ├── FidelityModeContext.tsx        ← Fidelity mode toggle context
-    └── routes.ts                     ← Route constants (update with your routes)
+    ├── ImagePlaceholder.tsx           ← Image placeholder (crossbox / real image)
+    ├── projectConfig.ts              ← Project name & initials for sidebar logo
+    ├── routes.ts                     ← Route constants (update with your routes)
+    ├── screens.ts                    ← Screen definitions (update with your screens)
+    ├── ScreensSidebar.tsx             ← Left sidebar with screen navigation
+    ├── TextPlaceholder.tsx            ← Text placeholder (bars / real text)
+    └── Toolbar.tsx                    ← Top toolbar with fidelity toggle and tools
 ```
 
 ## Requirements
