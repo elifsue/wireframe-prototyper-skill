@@ -19,7 +19,7 @@ Toggle between two fidelity levels from the toolbar:
 
 A built-in colour system editor that lets you:
 
-- Swap between built-in presets (Ocean Breeze, Midnight Violet, Emerald Garden, Arctic Frost, Berry Dusk, Slate & Citrus) or your own custom palette.
+- Swap between built-in presets (Terracotta & Gold, Ocean Breeze, Midnight Violet, Emerald Garden, Arctic Frost, Berry Dusk, Slate & Citrus) or your own custom palette.
 - Edit individual M3 colour tokens with hex input or eyedropper.
 - See changes reflected across all screens in real time.
 - Check WCAG contrast ratios with per-swatch warning indicators for failing pairs.
@@ -85,10 +85,11 @@ Once the prototype is running, you can:
 
 ## Built-In Presets
 
-The skill ships with 6 colour palettes that all pass WCAG AA contrast requirements:
+The skill ships with 7 colour palettes that all pass WCAG AA contrast requirements:
 
 | Preset | Primary | Character |
 |--------|---------|-----------|
+| Terracotta & Gold | Warm terracotta | Earthy, organic |
 | Ocean Breeze | Cool blue | Fresh, professional |
 | Midnight Violet | Desaturated purple | Calm, creative |
 | Emerald Garden | Rich green | Natural, grounded |

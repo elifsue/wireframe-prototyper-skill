@@ -27,7 +27,7 @@ Before implementation, ask the user these questions **one at a time** like an in
 
 1. Initialize a webdev project (static or server template depending on needs — typically static is sufficient for wireframes).
 2. Copy all files from `templates/` into the project following the folder mapping: contexts → `client/src/contexts/`, tools → `client/src/tools/`, routes.ts → `client/src/routes.ts`. Refer to `references/TEMPLATES_REFERENCE.md` for the full file list and descriptions.
-3. Update `dsPresets.ts`: Add the user's custom palette as the first item in `DS_PRESETS`. Keep the standard built-in presets (Ocean Breeze, Midnight Violet, Emerald Garden, Arctic Frost, Berry Dusk, Slate & Citrus) below it. `DEFAULT_DS_COLORS` automatically references the first preset.
+3. Update `dsPresets.ts`: Add the user's custom palette as the first item in `DS_PRESETS`. Keep the standard built-in presets (Terracotta & Gold, Ocean Breeze, Midnight Violet, Emerald Garden, Arctic Frost, Berry Dusk, Slate & Citrus) below it. `DEFAULT_DS_COLORS` automatically references the first preset.
 4. Update `projectConfig.ts`: Set `PROJECT_NAME` to the project's display name and `PROJECT_INITIALS` to a 1–3 letter abbreviation for the sidebar logo.
 5. Update `routes.ts`: Update the route entries to match the project's screens.
 6. Update `screens.ts`: Replace the screen entries with the project's actual screens (label, path pairs).
