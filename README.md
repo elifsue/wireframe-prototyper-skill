@@ -1,5 +1,7 @@
 # Wireframe Prototyper Skill
 
+[Medium Article](https://medium.com/@elifsue/design-with-context-a-claude-skill-that-studies-competitors-and-builds-your-prototype-e4cdd8cb7519) | [YouTube Demo](https://www.youtube.com/watch?v=EIryl8x3PCI)
+
 A Claude skill that builds interactive website wireframes and high-fidelity prototypes as deployed web applications. Instead of static mockups, you get a fully navigable prototype with switchable fidelity modes, a live colour system, and tools for presenting and exporting your work.
 
 ## What It Does
@@ -8,12 +10,20 @@ Give Claude a description of your project and this skill will produce a complete
 
 ## Features
 
+### Screen Navigation Sidebar
+
+A numbered list of all screens in your project. Click any screen to navigate to it instantly. The sidebar shows the total screen count and highlights the currently active screen.
+
+![Screen Navigation Sidebar](https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/woByAOBAGBNhjAlA.gif)
+
 ### Dual-Fidelity Mode Switching
 
 Toggle between two fidelity levels from the toolbar:
 
 - **Lo-Fi** — Black and white wireframes with crossbox image placeholders, text represented as lines, no rounded corners, and no hover states. Pure structure.
 - **Hi-Fi** — Full colour prototype using Material Design 3 tokens, generated images, hover states, border radius, elevation, and proper typography.
+
+![Dual-Fidelity Mode Switching](https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/zCvsuWgFVGZEYldm.gif)
 
 ### Colour Palette Tool
 
@@ -26,13 +36,13 @@ A built-in colour system editor that lets you:
 - Save, rename, and delete custom presets.
 - Export and import palettes as JSON.
 
-### Screen Navigation Sidebar
-
-A numbered list of all screens in your project. Click any screen to navigate to it instantly. The sidebar shows the total screen count and highlights the currently active screen.
+![Colour Palette Tool](https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/ORfRyRYFgzWnJezh.gif)
 
 ### Figma Capture Mode
 
 A mode that prevents dialogs and dropdown menus from auto-dismissing when clicking outside them. This allows you to take screenshots of open dialogs and dropdowns without them closing. Designed for capturing every UI state cleanly so you can import the screenshots into Figma using Figma's Code to Canvas feature through Figma MCP.
+
+![Figma Capture Mode](https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/qNDSxczDzDITuSpu.gif)
 
 ### Full Screen Mode
 
@@ -145,10 +155,12 @@ If you provide a competitor website during discovery, the skill will browse it t
 
 ## Figma Integration
 
+![Figma Integration](https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/eniFvajlhqTqBnLC.png)
+
 Use Figma Capture Mode to take clean screenshots of each screen, then import them into Figma using:
 
-- **Figma MCP** — Send screenshots directly to Figma frames via the Model Context Protocol.
-- **Figma Code to Canvas** — Paste the component code into Figma's Code to Canvas feature to get editable Figma layers.
+- **[Figma MCP](https://www.figma.com/mcp-catalog/)** — Send screenshots directly to Figma frames via the Model Context Protocol.
+- **[Figma Code to Canvas](https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/)** — Paste the component code into Figma's Code to Canvas feature to get editable Figma layers.
 
 ## License
 
