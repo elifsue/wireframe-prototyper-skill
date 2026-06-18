@@ -1,91 +1,137 @@
 # Wireframe Prototyper Skill
 
-A Claude skill that builds interactive website wireframes and high-fidelity prototypes as deployed web applications. Instead of static mockups, you get a fully navigable prototype with switchable fidelity modes, a live colour system, and tools for presenting and exporting your work.
+A reusable Claude Code Skill that streamlines the end-to-end design workflow, from structured discovery and competitor research to generating a WCAG-compliant design system and building interactive low-fidelity wireframes or high-fidelity prototypes with real navigation, exportable screens, and a transferable design system to Figma.
 
-## What It Does
+[Read on my Personal Website](https://elifsuates.com/wireframe-prototyper) · [Read on Medium](https://medium.com/@elifsue/design-with-context-a-claude-skill-that-studies-competitors-and-builds-your-prototype-e4cdd8cb7519) · [Watch on YouTube](https://www.youtube.com/watch?v=EIryl8x3PCI)
 
-Give Claude a description of your project and this skill will produce a complete set of screens as a running web app. You can switch between Lo-Fi wireframes and Hi-Fi prototypes with a single click, change your entire colour palette in real time, and navigate between screens using a sidebar.
+![Wireframe Prototyper Skill](https://elifsuates.com/images/wireframe-prototyper-thumbnail.png)
 
-## Features
+---
 
-### Dual-Fidelity Mode Switching
+## Overview
 
-Toggle between two fidelity levels from the toolbar:
+Wireframe Prototyper is a reusable AI design skill that turns an initial project brief into a structured design workflow. It guides the designer through discovery, competitor analysis, screen planning and accessibility considerations before generating low and high-fidelity prototypes with functional navigation, WCAG-compliant Material 3 color palette, reusable components and screens that can be transferred to Figma for further refinement.
 
-- **Lo-Fi** — Black and white wireframes with crossbox image placeholders, text represented as lines, no rounded corners, and no hover states. Pure structure.
-- **Hi-Fi** — Full colour prototype using Material Design 3 tokens, generated images, hover states, border radius, elevation, and proper typography.
+It was created to reduce repetitive prompting while keeping the designer in control of key decisions.
 
-### Colour Palette Tool
+![Round trip between Claude Code and Figma: Code to Canvas pushes generated code into Figma, and Design to Code brings Figma changes back](https://elifsuates.com/images/wireframe-prototyper/code-to-canvas-loop.png)
 
-A built-in colour system editor that lets you:
+## Key Capabilities
 
-- Swap between built-in presets (Terracotta & Gold, Ocean Breeze, Midnight Violet, Emerald Garden, Arctic Frost, Berry Dusk, Slate & Citrus) or your own custom palette.
-- Edit individual M3 colour tokens with hex input or eyedropper.
-- See changes reflected across all screens in real time.
-- Check WCAG contrast ratios with per-swatch warning indicators for failing pairs.
-- Save, rename, and delete custom presets.
-- Export and import palettes as JSON.
+| Capability | What it does |
+|---|---|
+| **Low-Fidelity Wireframes** | Generates black-and-white wireframes with placeholder content, crossbox image placeholders, and simplified layouts, ideal for rapid ideation and early stakeholder feedback. |
+| **High-Fidelity Prototypes** | Creates polished, interactive prototypes with full styling, real navigation between screens, and interactions ready for usability testing. |
+| **Competitor Analysis** | Conducts structured competitor research by analysing existing products in the space, identifying UX patterns, strengths, and gaps to inform design decisions. |
+| **WCAG-Compliant Design System** | Automatically generates a design system with accessible color contrast ratios, typography scales, spacing tokens, and component guidelines that meet WCAG 2.1 AA standards. |
+| **Material 3 Color Palette** | Generates a configurable Material Design 3 color palette with accessible pairings across primary, secondary, and tertiary tones. |
+| **Exportable Screens & Design System** | Outputs production-ready screens and a transferable design system that can be directly imported into Figma for handoff, iteration, and team collaboration. |
 
-### Screen Navigation Sidebar
+## The Interview Process
 
-A numbered list of all screens in your project. Click any screen to navigate to it instantly. The sidebar shows the total screen count and highlights the currently active screen.
+When a user starts a new project, the skill begins by interviewing them. It asks questions one at a time, waiting for the user's response before moving to the next:
 
-### Figma Capture Mode
+1. **Fidelity scope** — Does the user need Lo-Fi wireframes, Hi-Fi prototypes, or both?
+2. **Competitor analysis** — Is there a similar website to study?
+3. **Feature clarification** — Tailored questions about the specific project. "Does the project need user authentication?", "Should there be a messaging system?", "Is a payment flow required?", etc.
+4. **Screen list** — Based on the user's answers, the skill suggests a comprehensive list of screens grouped by section.
+5. **Color palette** — What vibe does the user want? Warm? Earthy? Vibrant?
+6. **Typography** — Font selection with Google Fonts integration.
 
-A mode that prevents dialogs and dropdown menus from auto-dismissing when clicking outside them. This allows you to take screenshots of open dialogs and dropdowns without them closing. Designed for capturing every UI state cleanly so you can import the screenshots into Figma using Figma's Code to Canvas feature through Figma MCP.
+This interview process is helpful, by making the user think about things they might have overlooked, while helping the user ensure that nothing gets built until the scope is clear.
 
-### Full Screen Mode
+![Skill Demo on Codex — the guided discovery flow, covering fidelity choice, competitor analysis, guided discovery, product name, color palette, and typography](https://elifsuates.com/images/wireframe-prototyper/skill-demo-on-codex.png)
 
-Hides all UI chrome for stakeholder presentations. Toggle with the toolbar button or the `F` keyboard shortcut.
+## Skill Output
 
-### Production-Ready Code
+### Screens Sidebar — to navigate through the screens
 
-Every screen is built with proper React components, one component per file, using Tailwind CSS. The code is structured for reuse: design system components, contexts, hooks, and screens are all separated. The output is not throwaway wireframe code — it can serve as a foundation for production development.
+The left sidebar gives the user an overview of the entire project. Every screen is listed, numbered, and clickable. The screens are linked through working navigation.
 
-## How to Use
+![Screens Sidebar](https://elifsuates.com/images/wireframe-prototyper/screens-sidebar.gif)
 
-### Step 1: Download the Skill
+### Fidelity Mode Switches — to toggle between wireframes and hi-fi prototype
 
-Download the `wireframe-prototyper-skill.zip` file from this repository.
+The toolbar allows the user to switch instantly between Lo-Fi (the structural skeleton) and Hi-Fi (the full visual experience). Starting with Lo-Fi encourages the user to focus on structure and flow before getting distracted by colors.
 
-### Step 2: Add It to Claude
+![Fidelity Mode Switches](https://elifsuates.com/images/wireframe-prototyper/fidelity-mode-switches.gif)
 
-Give the zip file to Claude as a skill. Once loaded, you can reference it in future conversations by its name.
+### The Color Palette Tool — to customise the website's WCAG-compliant color palette
 
-### Step 3: Start a Conversation
+Instead of writing prompts to change colors, the user can simply click. The tool includes the generated website's Material 3-based color palette from the user's prompt, built-in presets, and a live WCAG contrast checker. When the user clicks a preset, the entire prototype recolors instantly. The user can also create and save custom presets, then export palettes as JSON to share across projects.
 
-Tell Claude what you want to prototype. For example:
+![The Color Palette Tool](https://elifsuates.com/images/wireframe-prototyper/color-palette-tool.gif)
+
+### Figma Capture Mode — to allow importing screens and dialogs into Figma
+
+When Figma Capture Mode is turned on, dialogs and dropdown menus will not auto-dismiss when the user clicks outside them. This allows the user to capture screenshots of open dialogs and dropdowns without triggering their dismissal when clicking on the Figma Capture tool. The feature is specifically designed to allow the user to import dialogs and dropdowns into Figma using [Figma's Code to Canvas feature](https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/) through [Figma MCP](https://www.figma.com/mcp-catalog/).
+
+![Figma Capture Mode](https://elifsuates.com/images/wireframe-prototyper/figma-capture-mode.gif)
+
+## Why Use the Wireframe Prototyper Skill?
+
+The Wireframe Prototyper Skill enables rapid generation of interactive wireframes and prototypes directly from natural language prompts. It bridges the gap between ideation and implementation by allowing designers and developers to quickly visualise UI concepts without manual design tool work.
+
+The Wireframe Prototyper Skill solves this by providing:
+
+- **Structured discovery** — Upfront questions prevent wasted iterations later.
+- **Reusable templates** — The skill carries its own component templates, so AI does not need to reinvent them every session.
+- **Pre-loaded rules** — Design rules, accessibility requirements, and spacing systems are already defined.
+- **Batch efficiency** — The skill knows to build all components first, then screens, minimising context-switching.
+
+![From Scratch versus With the Skill — repeated prompting becomes a reusable workflow, AI filling gaps independently becomes designer-guided decisions, and inconsistent outputs become a structured design system](https://elifsuates.com/images/wireframe-prototyper/from-scratch-vs-with-skill.png)
+
+---
+
+## Installation
+
+Clone the repository into your skills directory.
+
+**Personal skill** (available in every project):
+
+```bash
+git clone https://github.com/elifsue/wireframe-prototyper-skill \
+  ~/.claude/skills/wireframe-prototyper
+```
+
+**Project skill** (checked in alongside a single project):
+
+```bash
+git clone https://github.com/elifsue/wireframe-prototyper-skill \
+  .claude/skills/wireframe-prototyper
+```
+
+For Claude apps that accept uploaded skills, zip the repository folder and upload it as a skill instead.
+
+## Usage
+
+Tell the agent what you want to prototype and reference the skill by name:
 
 > "I want to create wireframes for a second-hand children's clothing marketplace. Use the wireframe-prototyper skill."
 
-### Step 4: Answer the Discovery Questions
-
-The skill will ask you questions one at a time, like an interview:
-
-1. **Fidelity scope** — Do you need Lo-Fi, Hi-Fi, or both?
-2. **Competitor analysis** — Is there a similar website to draw inspiration from?
-3. **Feature clarification** — Questions about specific features (authentication, messaging, payments, etc.)
-4. **Screen list** — A suggested list of all screens, grouped by section. You can add, remove, or reorder.
-5. **Project name** — A name for the prototype.
-6. **Colour palette** — Your preferred colour style (warm, cool, earthy, vibrant, etc.)
-7. **Typography** — A font family for the project.
-
-### Step 5: Let It Build
-
-Claude will set up the project, create design system components, and build each screen. The result is a deployed web app you can interact with immediately.
-
-### Step 6: Iterate
+The skill then runs its interview, sets up the project, builds the design system components, builds each screen, and verifies compliance before handing back a running web app.
 
 Once the prototype is running, you can:
 
-- Switch fidelity modes from the toolbar.
-- Change colours using the Colour Palette Tool (no prompts needed, just click and pick).
-- Ask Claude to modify specific screens or add new ones.
-- Use Figma Capture Mode to screenshot screens for import into Figma.
+- Switch fidelity modes from the toolbar (or press `T`).
+- Change colors with the Color Palette Tool — no prompts needed, just click and pick.
+- Present without UI chrome using Full Screen (`F`).
+- Ask the agent to modify existing screens or add new ones.
+- Turn on Figma Capture Mode to screenshot dialogs and dropdowns for import into Figma.
 
-## Built-In Presets
+**Keyboard shortcuts:** `←` / `→` previous and next screen · `T` toggle Lo-Fi / Hi-Fi · `F` full screen · `Esc` exit full screen or close overlay · `?` show shortcuts.
 
-The skill ships with 7 colour palettes that all pass WCAG AA contrast requirements:
+## Workflow
+
+```
+Discovery Questions → Project Setup → Design System Components → Screen Implementation → Compliance Verification
+```
+
+Phase 5 is mandatory: the skill audits every screen against the design rules, the Hi-Fi requirements, and the Lo-Fi requirements before delivering the result.
+
+## Built-In Color Presets
+
+The skill ships with 7 palettes that all pass WCAG AA contrast requirements. The palette generated from your own prompt is added as the first preset and becomes the default.
 
 | Preset | Primary | Character |
 |--------|---------|-----------|
@@ -97,59 +143,39 @@ The skill ships with 7 colour palettes that all pass WCAG AA contrast requiremen
 | Berry Dusk | Magenta-berry | Bold, energetic |
 | Slate & Citrus | Dark slate | Sharp, modern |
 
-Your custom palette is always added as the first preset and becomes the default.
-
-## File Structure
+## Repository Structure
 
 ```
 wireframe-prototyper-skill/
-├── README.md                         ← This file
-├── SKILL.md                          ← Main skill instructions
+├── SKILL.md                                  ← Main skill instructions (5-phase workflow)
 ├── references/
-│   ├── DESIGN_RULES_REFERENCE.md     ← Common rules for both fidelity modes
+│   ├── COMPLIANCE_CHECKLIST.md               ← Phase 5 verification checklist
+│   ├── DESIGN_RULES_REFERENCE.md             ← Rules common to both fidelity modes
 │   ├── HIGH_FIDELITY_PROTOTYPE_REFERENCE.md  ← Hi-Fi specific rules
 │   ├── LOW_FIDELITY_WIREFRAME_REFERENCE.md   ← Lo-Fi specific rules
-│   └── M3_COLOR_ROLES_REFERENCE.md   ← Material Design 3 colour system guide
+│   ├── M3_COLOR_ROLES_REFERENCE.md           ← Material Design 3 color system guide
+│   └── TEMPLATES_REFERENCE.md                ← Template descriptions and folder mapping
 └── templates/
-    ├── AppShell.tsx                   ← Shell wrapper (sidebar + toolbar + canvas)
-    ├── ColorPaletteTool.tsx           ← Colour system editor with WCAG checker
-    ├── DesignSystem.ts               ← DS token object with live sync
-    ├── DesignSystemContext.tsx        ← Colour state and preset management
-    ├── dsPresets.ts                  ← Built-in palettes (add yours as first entry)
-    ├── FidelityModeContext.tsx        ← Fidelity mode toggle context
-    ├── ImagePlaceholder.tsx           ← Image placeholder (crossbox / real image)
-    ├── projectConfig.ts              ← Project name & initials for sidebar logo
-    ├── routes.ts                     ← Route constants (update with your routes)
-    ├── screens.ts                    ← Screen definitions (update with your screens)
-    ├── ScreensSidebar.tsx             ← Left sidebar with screen navigation
-    ├── TextPlaceholder.tsx            ← Text placeholder (bars / real text)
-    └── Toolbar.tsx                    ← Top toolbar with fidelity toggle and tools
+    ├── AppShell.tsx                          ← Shell wrapper (sidebar + toolbar + canvas)
+    ├── ColorPaletteTool.tsx                  ← Color system editor with WCAG checker
+    ├── DesignSystem.ts                       ← DS token object with live sync
+    ├── DesignSystemContext.tsx               ← Color state and preset management
+    ├── dsPresets.ts                          ← Built-in palettes (yours goes first)
+    ├── FidelityModeContext.tsx               ← Fidelity mode toggle context
+    ├── ImagePlaceholder.tsx                  ← Image placeholder (crossbox / real image)
+    ├── projectConfig.ts                      ← Project name & initials for sidebar logo
+    ├── routes.ts                             ← Route constants
+    ├── screens.ts                            ← Screen definitions
+    ├── ScreensSidebar.tsx                    ← Left sidebar with screen navigation
+    ├── TextPlaceholder.tsx                   ← Text placeholder (bars / real text)
+    └── Toolbar.tsx                           ← Top toolbar with fidelity toggle and tools
 ```
 
 ## Requirements
 
-- Claude with skill support
-- A web development environment (the skill uses React, Tailwind CSS, and Vite)
-
-## Workflow Overview
-
-```
-Discovery Questions → Project Setup → Design System Components → Screen Implementation → Compliance Verification
-```
-
-The skill enforces a compliance verification step at the end, checking every screen against the design rules, Hi-Fi requirements, and Lo-Fi requirements before delivering the final result.
-
-## Competitive Analysis
-
-If you provide a competitor website during discovery, the skill will browse it to understand layout patterns, navigation structure, and feature organisation. This structured inspiration helps produce screens that feel informed by real-world conventions rather than generic templates.
-
-## Figma Integration
-
-Use Figma Capture Mode to take clean screenshots of each screen, then import them into Figma using:
-
-- **Figma MCP** — Send screenshots directly to Figma frames via the Model Context Protocol.
-- **Figma Code to Canvas** — Paste the component code into Figma's Code to Canvas feature to get editable Figma layers.
+- An agent with skill support — built for Claude Code, and demonstrated running on Codex.
+- A web development environment; the generated prototype uses React, Tailwind CSS, and Vite.
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
