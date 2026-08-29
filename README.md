@@ -4,7 +4,7 @@ A reusable Claude Code Skill that streamlines the end-to-end design workflow, fr
 
 [Read on my Personal Website](https://elifsuates.com/wireframe-prototyper) · [Read on Medium](https://medium.com/@elifsue/design-with-context-a-claude-skill-that-studies-competitors-and-builds-your-prototype-e4cdd8cb7519) · [Watch on YouTube](https://www.youtube.com/watch?v=EIryl8x3PCI)
 
-![Wireframe Prototyper Skill](https://elifsuates.com/images/wireframe-prototyper-thumbnail.png)
+![Wireframe Prototyper Skill](assets/wireframe-prototyper-thumbnail.png)
 
 ---
 
@@ -14,7 +14,7 @@ Wireframe Prototyper is a reusable AI design skill that turns an initial project
 
 It was created to reduce repetitive prompting while keeping the designer in control of key decisions.
 
-![Round trip between Claude Code and Figma: Code to Canvas pushes generated code into Figma, and Design to Code brings Figma changes back](https://elifsuates.com/images/wireframe-prototyper/code-to-canvas-loop.png)
+![Round trip between Claude Code and Figma: Code to Canvas pushes generated code into Figma, and Design to Code brings Figma changes back](assets/code-to-canvas-loop.png)
 
 ## Key Capabilities
 
@@ -40,7 +40,7 @@ When a user starts a new project, the skill begins by interviewing them. It asks
 
 This interview process is helpful, by making the user think about things they might have overlooked, while helping the user ensure that nothing gets built until the scope is clear.
 
-![Skill Demo on Codex — the guided discovery flow, covering fidelity choice, competitor analysis, guided discovery, product name, color palette, and typography](https://elifsuates.com/images/wireframe-prototyper/skill-demo-on-codex.png)
+![Skill Demo on Codex — the guided discovery flow, covering fidelity choice, competitor analysis, guided discovery, product name, color palette, and typography](assets/skill-demo-on-codex.png)
 
 ## Skill Output
 
@@ -48,25 +48,25 @@ This interview process is helpful, by making the user think about things they mi
 
 The left sidebar gives the user an overview of the entire project. Every screen is listed, numbered, and clickable. The screens are linked through working navigation.
 
-![Screens Sidebar](https://elifsuates.com/images/wireframe-prototyper/screens-sidebar.gif)
+![Screens Sidebar](assets/screens-sidebar.gif)
 
 ### Fidelity Mode Switches — to toggle between wireframes and hi-fi prototype
 
 The toolbar allows the user to switch instantly between Lo-Fi (the structural skeleton) and Hi-Fi (the full visual experience). Starting with Lo-Fi encourages the user to focus on structure and flow before getting distracted by colors.
 
-![Fidelity Mode Switches](https://elifsuates.com/images/wireframe-prototyper/fidelity-mode-switches.gif)
+![Fidelity Mode Switches](assets/fidelity-mode-switches.gif)
 
 ### The Color Palette Tool — to customise the website's WCAG-compliant color palette
 
 Instead of writing prompts to change colors, the user can simply click. The tool includes the generated website's Material 3-based color palette from the user's prompt, built-in presets, and a live WCAG contrast checker. When the user clicks a preset, the entire prototype recolors instantly. The user can also create and save custom presets, then export palettes as JSON to share across projects.
 
-![The Color Palette Tool](https://elifsuates.com/images/wireframe-prototyper/color-palette-tool.gif)
+![The Color Palette Tool](assets/color-palette-tool.gif)
 
 ### Figma Capture Mode — to allow importing screens and dialogs into Figma
 
 When Figma Capture Mode is turned on, dialogs and dropdown menus will not auto-dismiss when the user clicks outside them. This allows the user to capture screenshots of open dialogs and dropdowns without triggering their dismissal when clicking on the Figma Capture tool. The feature is specifically designed to allow the user to import dialogs and dropdowns into Figma using [Figma's Code to Canvas feature](https://developers.figma.com/docs/figma-mcp-server/code-to-canvas/) through [Figma MCP](https://www.figma.com/mcp-catalog/).
 
-![Figma Capture Mode](https://elifsuates.com/images/wireframe-prototyper/figma-capture-mode.gif)
+![Figma Capture Mode](assets/figma-capture-mode.gif)
 
 ## Why Use the Wireframe Prototyper Skill?
 
@@ -79,7 +79,7 @@ The Wireframe Prototyper Skill solves this by providing:
 - **Pre-loaded rules** — Design rules, accessibility requirements, and spacing systems are already defined.
 - **Batch efficiency** — The skill knows to build all components first, then screens, minimising context-switching.
 
-![From Scratch versus With the Skill — repeated prompting becomes a reusable workflow, AI filling gaps independently becomes designer-guided decisions, and inconsistent outputs become a structured design system](https://elifsuates.com/images/wireframe-prototyper/from-scratch-vs-with-skill.png)
+![From Scratch versus With the Skill — repeated prompting becomes a reusable workflow, AI filling gaps independently becomes designer-guided decisions, and inconsistent outputs become a structured design system](assets/from-scratch-vs-with-skill.png)
 
 ---
 
