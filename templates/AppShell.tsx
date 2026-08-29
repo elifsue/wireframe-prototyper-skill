@@ -234,8 +234,14 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   /* ── Normal shell view ── */
   return (
     <div
-      className="shell-container flex h-screen"
-      style={{ background: "#f5f5f5" }}
+      className="flex h-screen"
+      style={{
+        background: "#f5f5f5",
+        // Shell chrome stays on the system font — it must not inherit the
+        // project's Google Font.
+        fontFamily:
+          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      }}
     >
       {helpOverlay}
 

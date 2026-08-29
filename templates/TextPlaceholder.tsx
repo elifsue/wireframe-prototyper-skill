@@ -30,7 +30,16 @@ export function TextPlaceholder({
   if (lines <= 1) {
     if (isLofi) {
       return (
-        <span className={`wireframe-text-bar ${className}`} style={{ width }} />
+        <span
+          className={className}
+          style={{
+            display: "inline-block",
+            width,
+            height: "8px",
+            background: "#000",
+            verticalAlign: "middle",
+          }}
+        />
       );
     }
     return (
@@ -51,8 +60,11 @@ export function TextPlaceholder({
         {Array.from({ length: lines }).map((_, i) => (
           <div
             key={i}
-            className="wireframe-text-line"
-            style={{ width: widths[i % widths.length] }}
+            style={{
+              width: widths[i % widths.length],
+              height: "8px",
+              background: "#000",
+            }}
           />
         ))}
       </div>
